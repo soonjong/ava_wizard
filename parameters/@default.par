@@ -1,0 +1,144 @@
+================================================================================
+    @file           @default.par
+    @brief          default parameter file format Adas Vision Application Wizard
+    @version        0.1
+    @warning        file fmt - unix, encoding fmt: ANSI
+    @instructions   It is not allowed to change this file arbitrarily without permission.
+                    If you have a good way to change to a better direction, please contact me.
+                    The parameter format is as follows. "#INDICATOR + blank + appropriate value"
+                    UPPER CASE is recommended as an INDICATOR.
+    @author         Jin, Soonjong (soonjong.jin@gmail.com)
+    @date           revision history
+                    2017.01/08 - v0.1: files is created by Jin, Soonjong
+================================================================================
+
+================================================================================
+    RUN MODE SETTING
+    @brief          Mode setting to RUN or SKIP
+    @instructions   Set to "RUN" if you want to run for each. Except "RUN", All others are assumed that application is NOT excuted. Be careful of CaSe.
+--------------------------------------------------------------------------------
+#MODE_TO_RUN_AVM        SKIP        /* Around View Monitoring */
+#MODE_TO_RUN_AVM_AEB        SKIP    /* Autonomous Emegency Braking */
+#MODE_TO_RUN_AVM_AOC        SKIP    /* Autonomous Online Calibration */
+#MODE_TO_RUN_AVM_AOD        SKIP    /* Approaching Object Detection */
+#MODE_TO_RUN_AVM_BSD        SKIP    /* Blind Spot Detection */
+#MODE_TO_RUN_AVM_CTC        SKIP    /* Camera Tolerance Calibration */
+#MODE_TO_RUN_AVM_GOD        SKIP    /* General Object Detection */
+#MODE_TO_RUN_AVM_LDW        SKIP    /* Lane Departure Warning */
+#MODE_TO_RUN_AVM_PCA        SKIP    /* Parking Collision Avoidance */
+#MODE_TO_RUN_AVM_PLD        SKIP    /* Parking Lane Detection */
+
+#MODE_TO_RUN_CMS        SKIP        /* Camera Mirrorless System */
+#MODE_TO_RUN_CMS_BSD        SKIP    /* Blind Spot Detection */
+#MODE_TO_RUN_CMS_GOD        SKIP    /* General Object Detection */
+#MODE_TO_RUN_CMS_LDW        SKIP    /* Lane Departure Warning */
+
+#MODE_TO_RUN_MFC        RUN        /* Multi Function Camera */
+#MODE_TO_RUN_MFC_AEB        SKIP    /* Autonomous Emegency Braking */
+#MODE_TO_RUN_MFC_FCW        SKIP    /* Forward Collision Warning */
+#MODE_TO_RUN_MFC_GOD        RUN     /* General Object Detection */
+#MODE_TO_RUN_MFC_HBA        SKIP    /* High Beam Assist */
+#MODE_TO_RUN_MFC_ISP        SKIP    /* Image Signal Processor */
+#MODE_TO_RUN_MFC_LDW        SKIP    /* Lane Departure Warning */
+#MODE_TO_RUN_MFC_PDA        SKIP    /* Pedestrian Detection Algorithm */
+#MODE_TO_RUN_MFC_TSR        SKIP    /* Traffic Sign Recognition */
+
+#MODE_TO_RUN_RVC        SKIP        /* Rear View Camera */
+#MODE_TO_RUN_RVC_AEB        SKIP    /* Autonomous Emegency Braking */
+#MODE_TO_RUN_RVC_AOD        SKIP    /* Approaching Object Detection */
+#MODE_TO_RUN_RVC_GOD        SKIP    /* General Object Detection */
+#MODE_TO_RUN_RVC_PCA        SKIP    /* Parking Collision Avoidance */
+#MODE_TO_RUN_RVC_PLD        SKIP    /* Parking Lane Detection */
+================================================================================
+
+
+
+================================================================================
+    [AVM] OUTPUT SETTING
+    @brief          AVM output setting including path.
+    @warning        User must have the appropriate permissions to create folders and files.
+                    Make sure you have the suitable video code. H.264 is recommended.
+    @instructions   Write down the correct output path location.
+                    Possiable file extensions: avi/AVI/mpg/MPG/mp4/MP4
+--------------------------------------------------------------------------------
+#OUTPUT_AVM_PATH_ROOT       e:/projects/results/avm
+#OUTPUT_AVM_FOLDER          20170108
+#OUTPUT_AVM_FILE_NAME       20170108_test
+#OUTPUT_AVM_FILE_EXTENSION  avi
+================================================================================
+
+
+================================================================================
+    [AVM] INPUT [CAMERA] SETTING
+    @brief          AVM input camera setting including path.
+    @warning        The frame size should be the same as the pre-defined size in the program.
+                    Frame size should be positive.
+                    The size of width shold be a multiple of 16.
+    @instructions   SIZE_WIDTH and SIZE_HEIGHT: Write down the accurate frame size.
+                    SEQ_FORMAT: Select the correct format from bellow.
+                         0: yuv 4:2:2 interleaved with sequence order of y-u-y-v.
+                         1: yuv 4:2:2 interleaved with sequence order of y-v-y-u.
+                         2: yuv 4:2:2 interleaved with sequence order of u-y-v-y.
+                         3: yuv 4:2:2 interleaved with sequence order of v-y-u-y.
+                         4: yuv 4:2:2 planar with frame order of y/u/v.
+                         5: yuv 4:2:0 planar with frame order of y/u/v.
+                         6: yuv 4:4:4 interleaved sequence with order of y-u-v.
+                         7: yuv 4:4:4 planar with frame order of y/u/v.
+                         8: rgb 4:4:4 interleaved with sequence order of b-g-r.
+                         9: rgb 4:4:4 interleaved with sequence order of r-g-b.
+                        10: rgb 4:4:4 planar with sequence order of b/g/r.
+                        11: rgb 4:4:4 planar with sequence order of r/g/b.
+                    SEQ_INTERVAL: Write down the accurate time interval between frames in micro sec.
+--------------------------------------------------------------------------------
+#INPUT_AVM_CMR_SIZE_WIDTH           1280    /* frame width */
+#INPUT_AVM_CMR_SIZE_HEIGHT          720     /* frame height */
+#INPUT_AVM_CMR_SEQ_FORMAT           2       /* yuv 4:2:2 interleaved with order of u/y/v/y */
+#INPUT_AVM_CMR_SEQ_INTERVAL         33333   /* micro sec */
+
+
+#INPUT_AVM_CMR_FRONT_PATH_ROOT          e:/projects/results/avm
+#INPUT_AVM_CMR_FRONT_FOLDER             20170108
+#INPUT_AVM_CMR_FRONT_FILE_NAME          20170108_test_front
+#INPUT_AVM_CMR_FRONT_FILE_EXTENSION     avi
+
+#INPUT_AVM_CMR_LEFT_PATH_ROOT           e:/projects/results/avm
+#INPUT_AVM_CMR_LEFT_FOLDER              20170108
+#INPUT_AVM_CMR_LEFT_FILE_NAME           20170108_test_left
+#INPUT_AVM_CMR_LEFT_FILE_EXTENSION      avi
+
+#INPUT_AVM_CMR_RIGHT_PATH_ROOT          e:/projects/results/avm
+#INPUT_AVM_CMR_RIGHT_FOLDER             20170108
+#INPUT_AVM_CMR_RIGHT_FILE_NAME          20170108_test_right
+#INPUT_AVM_CMR_RIGHT_FILE_EXTENSION     avi
+
+#INPUT_AVM_CMR_REAR_PATH_ROOT           e:/projects/results/avm
+#INPUT_AVM_CMR_REAR_FOLDER              20170108
+#INPUT_AVM_CMR_REAR_FILE_NAME           20170108_test_rear
+#INPUT_AVM_CMR_REAR_FILE_EXTENSION      avi
+================================================================================
+
+
+================================================================================
+    [AVM] INPUT [CAN] SETTING
+    @brief          AVM input can setting including path.
+    @warning        The packet size should be the same as the pre-defined size in the program.
+                    Packet size should be positive.
+    @instructions   SIZE: Write down the accurate packet size.
+                    SEQ_INTERVAL: Write down the accurate time interval between packet in micro sec.
+--------------------------------------------------------------------------------
+#INPUT_AVM_CAN_SIZE_PACKET          24      /* packet size in byte */
+#INPUT_AVM_CAN_SEQ_INTERVAL         33333   /* micro sec */
+
+
+#INPUT_AVM_CAN_PATH_ROOT            e:/projects/results/avm
+#INPUT_AVM_CAN_FOLDER               20170108
+#INPUT_AVM_CAN_FILE_NAME            20170108_test
+#INPUT_AVM_CAN_FILE_EXTENSION       bin
+
+
+
+
+================================================================================
+    END OF FILE
+================================================================================
+#EOF

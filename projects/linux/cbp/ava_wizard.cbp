@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ava_wizard" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="app_common/;app_common/includes/;app_common/includes/arm_neon/;app_common/includes/dbg_img/;app_common/includes/opencv/;app_common/includes/opencv/x64/;app_common/includes/opencv/x86/;app_common/sources/;app_common/sources/arm_neon/;app_common/sources/dbg_img/;ava_wizard/;ava_wizard/sources/;ava_wizard/sources/app_mgr/;ava_wizard/sources/swp_mgr/;ava_wizard/sources/app_mgr/app_avm/;ava_wizard/sources/app_mgr/app_cms/;ava_wizard/sources/app_mgr/app_mfc/;ava_wizard/sources/app_mgr/app_rvc/;ava_wizard/sources/swp_mgr/swp_can/;ava_wizard/sources/swp_mgr/swp_cmr/;ava_wizard/sources/swp_mgr/swp_vop/;ava_wizard/sources/app_mgr/app_avm/app_avm_aeb/;ava_wizard/sources/app_mgr/app_avm/app_avm_aoc/;ava_wizard/sources/app_mgr/app_avm/app_avm_aod/;ava_wizard/sources/app_mgr/app_avm/app_avm_bsd/;ava_wizard/sources/app_mgr/app_avm/app_avm_ctc/;ava_wizard/sources/app_mgr/app_avm/app_avm_god/;ava_wizard/sources/app_mgr/app_avm/app_avm_ipu/;ava_wizard/sources/app_mgr/app_avm/app_avm_ldw/;ava_wizard/sources/app_mgr/app_avm/app_avm_pca/;ava_wizard/sources/app_mgr/app_avm/app_avm_pld/;ava_wizard/sources/app_mgr/app_cms/app_cms_bsd/;ava_wizard/sources/app_mgr/app_cms/app_cms_god/;ava_wizard/sources/app_mgr/app_cms/app_cms_ipu/;ava_wizard/sources/app_mgr/app_cms/app_cms_ldw/;ava_wizard/sources/app_mgr/app_mfc/app_mfc_aeb/;ava_wizard/sources/app_mgr/app_mfc/app_mfc_fcw/;ava_wizard/sources/app_mgr/app_mfc/app_mfc_god/;ava_wizard/sources/app_mgr/app_mfc/app_mfc_hba/;ava_wizard/sources/app_mgr/app_mfc/app_mfc_ipu/;ava_wizard/sources/app_mgr/app_mfc/app_mfc_isp/;ava_wizard/sources/app_mgr/app_mfc/app_mfc_ldw/;ava_wizard/sources/app_mgr/app_mfc/app_mfc_pda/;ava_wizard/sources/app_mgr/app_mfc/app_mfc_tsr/;ava_wizard/sources/app_mgr/app_rvc/app_rvc_aod/;ava_wizard/sources/app_mgr/app_rvc/app_rvc_god/;ava_wizard/sources/app_mgr/app_rvc/app_rvc_ipu/;ava_wizard/sources/app_mgr/app_rvc/app_rvc_pca/;ava_wizard/sources/app_mgr/app_rvc/app_rvc_pld/;ava_wizard/sources/swp_mgr/swp_can/swp_can_avm/;ava_wizard/sources/swp_mgr/swp_can/swp_can_cms/;ava_wizard/sources/swp_mgr/swp_can/swp_can_mfc/;ava_wizard/sources/swp_mgr/swp_can/swp_can_rvc/;ava_wizard/sources/swp_mgr/swp_vop/swp_vop_avm/;ava_wizard/sources/swp_mgr/swp_vop/swp_vop_cms/;ava_wizard/sources/swp_mgr/swp_vop/swp_vop_mfc/;ava_wizard/sources/swp_mgr/swp_vop/swp_vop_rvc/;" />
+		<Build>
+			<Target title="debug">
+				<Option output="../../../../results/ava_wizard" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../objects/linux/debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="release">
+				<Option output="../../../../results/ava_wizard" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../objects/linux/release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
